@@ -26,3 +26,9 @@ fun ApplicationManager.calculateOnce(): Int {
     println("count: $count")
     return count
 }
+
+fun ApplicationManager.calculateUntilEnd() {
+    while (true) {
+        if (calculateOnce() == 0) break
+    }
+}
