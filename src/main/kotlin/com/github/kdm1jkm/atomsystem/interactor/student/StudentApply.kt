@@ -24,6 +24,7 @@ class StudentApply(private val manager: ApplicationManager, private val student:
         var new = ""
 
         while (true) {
+            print(" ")
             new = readln()
             if (new == "") break
             builder.append(new)

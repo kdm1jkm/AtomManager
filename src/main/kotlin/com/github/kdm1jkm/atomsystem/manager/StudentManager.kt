@@ -32,3 +32,9 @@ fun ApplicationManager.apply(student: Student, applicationMethod: ApplicationMet
 fun ApplicationManager.getStudentById(id: String): Student? {
     return data.students.find { it.id == id }
 }
+
+fun ApplicationManager.getApplied(method: ApplicationMethod): List<Application> {
+    return data.applications.filter {
+        it.methodId == method.id
+    }
+}

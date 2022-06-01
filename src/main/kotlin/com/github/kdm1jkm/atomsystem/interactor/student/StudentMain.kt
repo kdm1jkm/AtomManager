@@ -20,15 +20,15 @@ class StudentMain(private val manager: ApplicationManager, private val student: 
                 println("--원서 목록--")
                 manager.getApplicationMethods()
                     .map { "${it.name}(id: ${it.id})" }
-                    .let { println(it) }
+                    .forEach { println(it) }
 
                 run()
             }
             "2" -> run {
                 println("--지원한 원서 목록--")
                 manager.getApplied(student)
-                    .map { it.schoolId }
-                    .let { println(it) }
+                    .map { it.methodId }
+                    .forEach { println(it) }
 
                 run()
             }

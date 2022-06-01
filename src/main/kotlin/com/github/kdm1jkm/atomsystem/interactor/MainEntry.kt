@@ -1,6 +1,7 @@
 package com.github.kdm1jkm.atomsystem.interactor
 
 import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.interactor.method.MethodEntry
 import com.github.kdm1jkm.atomsystem.interactor.student.StudentEntry
 
 class MainEntry(private val manager: ApplicationManager) : Interactor {
@@ -10,7 +11,7 @@ class MainEntry(private val manager: ApplicationManager) : Interactor {
         print("Enter: ")
         return when (readln()) {
             "1" -> StudentEntry(manager)
-            "2" -> null
+            "2" -> MethodEntry(manager)
             else -> run()
         }
     }
