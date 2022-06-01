@@ -26,8 +26,17 @@ class MethodRegister(private val manager: ApplicationManager) : Interactor {
             toString()
         }
 
+        val max = run {
+            var input: Int? = null
+            while (input == null) {
+                print("전형 최대 인원 입력: ")
+                input = readln().toIntOrNull()
+            }
+            input
+        }
+
         try {
-            manager.registerMethod(ApplicationMethod(id, name, content))
+            manager.registerMethod(ApplicationMethod(id, name, content, max))
         } catch (e: IllegalArgumentException) {
             println(e.message)
         }

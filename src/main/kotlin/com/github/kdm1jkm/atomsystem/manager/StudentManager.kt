@@ -1,7 +1,6 @@
 package com.github.kdm1jkm.atomsystem.manager
 
 import com.github.kdm1jkm.atomsystem.ApplicationManager
-import com.github.kdm1jkm.atomsystem.ApplicationManager.Companion.MAX_APPLICATION
 import com.github.kdm1jkm.atomsystem.models.Application
 import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
 import com.github.kdm1jkm.atomsystem.models.Student
@@ -22,11 +21,16 @@ fun ApplicationManager.getApplied(student: Student): List<Application> {
     }
 }
 
-fun ApplicationManager.apply(student: Student, applicationMethod: ApplicationMethod, content: String) {
-    if (getApplied(student).size > MAX_APPLICATION)
-        throw IllegalStateException("Already applied $MAX_APPLICATION application.")
-
-    data.applications.add(Application(student.id, applicationMethod.id, content, Application.State.NOT_RATED))
+fun ApplicationManager.apply(student: Student, applicationMethod: ApplicationMethod, content: String, preference: Int) {
+    data.applications.add(
+        Application(
+            student.id,
+            applicationMethod.id,
+            content,
+            Application.State.NOT_RATED,
+            preference
+        )
+    )
 }
 
 fun ApplicationManager.getStudentById(id: String): Student? {

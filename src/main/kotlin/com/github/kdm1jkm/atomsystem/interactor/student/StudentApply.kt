@@ -20,20 +20,29 @@ class StudentApply(private val manager: ApplicationManager, private val student:
         println("----------")
         println(method.content)
         println("----------")
-        val builder = StringBuilder()
-        var new = ""
 
-        while (true) {
-            print(" ")
-            new = readln()
-            if (new == "") break
-            builder.append(new)
-            builder.append("\n")
+        val content = StringBuilder().run {
+            var new: String
+            while (true) {
+                print(" ")
+                new = readln()
+                if (new == "") break
+                append(new)
+                append("\n")
+            }
+            toString()
         }
 
-        val content = builder.toString()
+        val preference = run {
+            var input: Int? = null
+            while (input == null) {
+                print("우선순위 입력(숫자가 낮을수록 우선시함): ")
+                input = readln().toIntOrNull()
+            }
+            input
+        }
 
-        manager.apply(student, method, content)
+        manager.apply(student, method, content, preference)
         manager.save()
 
         return StudentMain(manager, student)

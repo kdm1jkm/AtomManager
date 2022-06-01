@@ -6,5 +6,6 @@ import kotlinx.serialization.Serializable
 data class ApplicationMethod(
     val id: String,
     val name: String,
-    val content: String
+    val content: String,
+    val max: Int
 )

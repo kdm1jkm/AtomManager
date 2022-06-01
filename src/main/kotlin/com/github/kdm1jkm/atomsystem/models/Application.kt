@@ -8,7 +8,8 @@ data class Application(
     val methodId: String,
     val submittedContent: String,
     val state: State,
-    val score: Int = 0
+    val preference: Int,
+    val score: Int = 0,
 ) {
     enum class State {
         NOT_RATED, RATED, ACCEPTED, DENIED

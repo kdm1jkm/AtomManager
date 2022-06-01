@@ -15,10 +15,6 @@ import java.io.FileOutputStream
 
 @Suppress("OPT_IN_USAGE")
 class ApplicationManager(private val file: File = File("./data.json")) {
-    companion object {
-        internal const val MAX_APPLICATION = 6
-    }
-
     internal val data: DBData = if (file.isFile) {
         try {
             Json.decodeFromStream(FileInputStream(file))
