@@ -13,19 +13,19 @@ import java.io.FileOutputStream
 
 
 @Suppress("OPT_IN_USAGE")
-class DBManager(file: File? = null) {
-    private val data: DBData
-
-    init {
-        data = if (file == null || file.isFile) {
-            DBData(ArrayList(), ArrayList(), ArrayList())
-        } else {
-            Json.decodeFromStream(FileInputStream(file))
-        }
+class ApplicationManager(private val file: File = File("./data.json")) {
+    companion object {
+        internal const val MAX_APPLICATION = 6
     }
 
-    fun save(file: File) {
-        Json.encodeToStream(data, FileOutputStream(file))
+    internal val data: DBData = if (file.isFile) {
+        Json.decodeFromStream(FileInputStream(file))
+    } else {
+        DBData(ArrayList(), ArrayList(), ArrayList())
+    }
+
+    fun save(save: File = file) {
+        Json.encodeToStream(data, FileOutputStream(save))
     }
 
     @Serializable
