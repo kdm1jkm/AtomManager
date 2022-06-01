@@ -1,4 +1,4 @@
-package com.github.kdm1jkm.interactor
+package com.github.kdm1jkm.atomsystem.interactor
 
 interface Interactor {
     // Return next interactor, if null, exit program

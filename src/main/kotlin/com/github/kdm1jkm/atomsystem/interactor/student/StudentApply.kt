@@ -1,10 +1,10 @@
-package com.github.kdm1jkm.interactor.student
+package com.github.kdm1jkm.atomsystem.interactor.student
 
-import com.github.kdm1jkm.ApplicationManager
-import com.github.kdm1jkm.interactor.Interactor
-import com.github.kdm1jkm.manager.apply
-import com.github.kdm1jkm.manager.getMethodById
-import com.github.kdm1jkm.models.Student
+import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.interactor.Interactor
+import com.github.kdm1jkm.atomsystem.manager.apply
+import com.github.kdm1jkm.atomsystem.manager.getMethodById
+import com.github.kdm1jkm.atomsystem.models.Student
 
 class StudentApply(private val manager: ApplicationManager, private val student: Student) : Interactor {
     override fun run(): Interactor {

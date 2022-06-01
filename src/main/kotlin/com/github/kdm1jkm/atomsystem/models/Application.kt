@@ -1,4 +1,4 @@
-package com.github.kdm1jkm.models
+package com.github.kdm1jkm.atomsystem.models
 
 import kotlinx.serialization.Serializable
 

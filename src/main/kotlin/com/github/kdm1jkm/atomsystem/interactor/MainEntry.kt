@@ -1,7 +1,7 @@
-package com.github.kdm1jkm.interactor
+package com.github.kdm1jkm.atomsystem.interactor
 
-import com.github.kdm1jkm.ApplicationManager
-import com.github.kdm1jkm.interactor.student.StudentEntry
+import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.interactor.student.StudentEntry
 
 class MainEntry(private val manager: ApplicationManager) : Interactor {
     override fun run(): Interactor? {

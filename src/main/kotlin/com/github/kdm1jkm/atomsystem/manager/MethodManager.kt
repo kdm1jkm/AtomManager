@@ -1,7 +1,7 @@
-package com.github.kdm1jkm.manager
+package com.github.kdm1jkm.atomsystem.manager
 
-import com.github.kdm1jkm.ApplicationManager
-import com.github.kdm1jkm.models.ApplicationMethod
+import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
 
 fun ApplicationManager.getApplicationMethods(): List<ApplicationMethod> {
     return data.applicationMethods

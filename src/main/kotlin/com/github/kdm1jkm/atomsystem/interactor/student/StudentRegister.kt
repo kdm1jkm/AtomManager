@@ -1,9 +1,9 @@
-package com.github.kdm1jkm.interactor.student
+package com.github.kdm1jkm.atomsystem.interactor.student
 
-import com.github.kdm1jkm.ApplicationManager
-import com.github.kdm1jkm.interactor.Interactor
-import com.github.kdm1jkm.manager.registerStudent
-import com.github.kdm1jkm.models.Student
+import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.interactor.Interactor
+import com.github.kdm1jkm.atomsystem.manager.registerStudent
+import com.github.kdm1jkm.atomsystem.models.Student
 
 class StudentRegister(private val manager: ApplicationManager) :
     Interactor {

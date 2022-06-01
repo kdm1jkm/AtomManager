@@ -1,10 +1,10 @@
-package com.github.kdm1jkm.manager
+package com.github.kdm1jkm.atomsystem.manager
 
-import com.github.kdm1jkm.ApplicationManager
-import com.github.kdm1jkm.ApplicationManager.Companion.MAX_APPLICATION
-import com.github.kdm1jkm.models.Application
-import com.github.kdm1jkm.models.ApplicationMethod
-import com.github.kdm1jkm.models.Student
+import com.github.kdm1jkm.atomsystem.ApplicationManager
+import com.github.kdm1jkm.atomsystem.ApplicationManager.Companion.MAX_APPLICATION
+import com.github.kdm1jkm.atomsystem.models.Application
+import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
+import com.github.kdm1jkm.atomsystem.models.Student
 
 fun ApplicationManager.registerStudent(student: Student) {
     with(data.students) {

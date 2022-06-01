@@ -1,7 +1,7 @@
-package com.github.kdm1jkm
+package com.github.kdm1jkm.atomsystem
 
-import com.github.kdm1jkm.interactor.Interactor
-import com.github.kdm1jkm.interactor.MainEntry
+import com.github.kdm1jkm.atomsystem.interactor.Interactor
+import com.github.kdm1jkm.atomsystem.interactor.MainEntry
 import java.io.File
 
 fun main() {

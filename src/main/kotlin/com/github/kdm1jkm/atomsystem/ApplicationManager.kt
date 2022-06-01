@@ -1,8 +1,8 @@
-package com.github.kdm1jkm
+package com.github.kdm1jkm.atomsystem
 
-import com.github.kdm1jkm.models.Application
-import com.github.kdm1jkm.models.ApplicationMethod
-import com.github.kdm1jkm.models.Student
+import com.github.kdm1jkm.atomsystem.models.Application
+import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
+import com.github.kdm1jkm.atomsystem.models.Student
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
