@@ -17,7 +17,7 @@ class StudentMain(private val manager: ApplicationManager, private val student: 
 
         return when (readln()) {
             "1" -> run {
-                println("--원서 목록--")
+                println("\n--원서 목록--")
                 manager.getApplicationMethods()
                     .map { "${it.name}(id: ${it.id})" }
                     .forEach { println(it) }
@@ -25,7 +25,7 @@ class StudentMain(private val manager: ApplicationManager, private val student: 
                 run()
             }
             "2" -> run {
-                println("--지원한 원서 목록--")
+                println("\n--지원한 원서 목록--")
                 manager.getApplied(student)
                     .sortedBy { it.preference }
                     .map { "(${it.preference})${it.methodId}: ${it.state}" }
