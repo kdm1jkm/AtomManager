@@ -13,7 +13,7 @@ import java.io.FileOutputStream
 
 
 @Suppress("OPT_IN_USAGE")
-class DBManager(file: File?) {
+class DBManager(file: File? = null) {
     private val data: DBData
 
     init {
