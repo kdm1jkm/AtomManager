@@ -1,10 +1,37 @@
 package com.github.kdm1jkm
 
-import org.jetbrains.exposed.sql.Database
+import com.github.kdm1jkm.models.Application
+import com.github.kdm1jkm.models.ApplicationMethod
+import com.github.kdm1jkm.models.Student
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.decodeFromStream
+import kotlinx.serialization.json.encodeToStream
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 
-class DBManager(file: File) {
+
+@Suppress("OPT_IN_USAGE")
+class DBManager(file: File?) {
+    private val data: DBData
+
     init {
-        Database.connect("jdbc:h2:${file.absolutePath}")
+        data = if (file == null) {
+            DBData(ArrayList(), ArrayList(), ArrayList())
+        } else {
+            Json.decodeFromStream(FileInputStream(file))
+        }
     }
+
+    fun save(file: File) {
+        Json.encodeToStream(data, FileOutputStream(file))
+    }
+
+    @Serializable
+    data class DBData(
+        val applications: MutableList<Application>,
+        val applicationMethods: MutableList<ApplicationMethod>,
+        val students: MutableList<Student>
+    )
 }

@@ -1,7 +1,10 @@
 package com.github.kdm1jkm.models
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ApplicationMethod(
-    val userId: String,
+    val id: String,
     val name: String,
-    @Suppress("ArrayInDataClass") val content: ByteArray
+    val content: String
 )
