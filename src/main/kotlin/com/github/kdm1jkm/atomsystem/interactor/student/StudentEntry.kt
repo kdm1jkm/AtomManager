@@ -6,7 +6,7 @@ import com.github.kdm1jkm.atomsystem.interactor.MainEntry
 
 class StudentEntry(private val manager: ApplicationManager) : Interactor {
     override fun run(): Interactor? {
-        println("1. 회원가입")
+        println("\n1. 회원가입")
         println("2. 로그인")
         println("3. 돌아가기")
         print("Enter: ")

@@ -8,7 +8,7 @@ import com.github.kdm1jkm.atomsystem.interactor.student.StudentRegister
 
 class MethodEntry(private val manager: ApplicationManager):Interactor {
     override fun run(): Interactor? {
-        println("1. 전형등록")
+        println("\n1. 전형등록")
         println("2. 로그인")
         println("3. 돌아가기")
         print("Enter: ")

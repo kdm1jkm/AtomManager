@@ -8,7 +8,7 @@ import com.github.kdm1jkm.atomsystem.models.Student
 
 class StudentMain(private val manager: ApplicationManager, private val student: Student) : Interactor {
     override fun run(): Interactor? {
-        println("현재 ${student.name}님으로 로그인되어 있습니다.")
+        println("\n현재 ${student.name}님으로 로그인되어 있습니다.")
         println("1. 지원 가능 원서 확인")
         println("2. 지원한 원서 목록 확인")
         println("3. 원서 지원하기")
@@ -27,7 +27,8 @@ class StudentMain(private val manager: ApplicationManager, private val student: 
             "2" -> run {
                 println("--지원한 원서 목록--")
                 manager.getApplied(student)
-                    .map { it.methodId }
+                    .sortedBy { it.preference }
+                    .map { "(${it.preference})${it.methodId}: ${it.state}" }
                     .forEach { println(it) }
 
                 run()

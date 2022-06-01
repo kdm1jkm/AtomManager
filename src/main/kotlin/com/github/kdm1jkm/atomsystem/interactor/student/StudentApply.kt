@@ -8,7 +8,7 @@ import com.github.kdm1jkm.atomsystem.models.Student
 
 class StudentApply(private val manager: ApplicationManager, private val student: Student) : Interactor {
     override fun run(): Interactor {
-        println("--지원서 작성--")
+        println("\n--지원서 작성--")
         print("지원할 곳의 id 입력: ")
         val method = manager.getMethodById(readln())
         if (method == null) {

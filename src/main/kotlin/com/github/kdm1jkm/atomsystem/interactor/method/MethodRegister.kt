@@ -7,7 +7,7 @@ import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
 
 class MethodRegister(private val manager: ApplicationManager) : Interactor {
     override fun run(): Interactor {
-        println("--전형 등록--")
+        println("\n--전형 등록--")
         print("id를 입력하세요: ")
         val id = readln()
         print("이름을 입력하세요: ")

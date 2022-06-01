@@ -8,7 +8,7 @@ import com.github.kdm1jkm.atomsystem.models.Student
 class StudentRegister(private val manager: ApplicationManager) :
     Interactor {
     override fun run(): Interactor {
-        println("--회원가입--")
+        println("\n--회원가입--")
         print("id를 입력하세요: ")
         val id = readln()
         print("이름을 입력하세요: ")

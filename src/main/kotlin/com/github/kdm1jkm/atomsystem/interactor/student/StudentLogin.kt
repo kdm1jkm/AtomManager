@@ -7,7 +7,7 @@ import com.github.kdm1jkm.atomsystem.manager.getStudentById
 class StudentLogin(private val manager: ApplicationManager) :
     Interactor {
     override fun run(): Interactor {
-        println("--로그인--")
+        println("\n--로그인--")
         print("id를 입력하세요: ")
         val student = manager.getStudentById(readln())
 

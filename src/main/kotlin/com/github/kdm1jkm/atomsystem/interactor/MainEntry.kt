@@ -7,7 +7,7 @@ import com.github.kdm1jkm.atomsystem.interactor.student.StudentEntry
 
 class MainEntry(private val manager: ApplicationManager) : Interactor {
     override fun run(): Interactor? {
-        println("1. 지원하는 사람용")
+        println("\n1. 지원하는 사람용")
         println("2. 지원받는 사람용")
         println("3. 계산")
         println("4. 종료")

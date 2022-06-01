@@ -5,8 +5,8 @@ import com.github.kdm1jkm.atomsystem.interactor.Interactor
 import com.github.kdm1jkm.atomsystem.manager.getMethodById
 
 class MethodLogin(private val manager: ApplicationManager) : Interactor {
-    override fun run(): Interactor? {
-        println("--로그인--")
+    override fun run(): Interactor {
+        println("\n--로그인--")
         print("id를 입력하세요: ")
         val method = manager.getMethodById(readln())
 

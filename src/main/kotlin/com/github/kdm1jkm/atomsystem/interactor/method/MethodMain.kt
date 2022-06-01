@@ -8,7 +8,7 @@ import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
 
 class MethodMain(private val manager: ApplicationManager, private val method: ApplicationMethod) : Interactor {
     override fun run(): Interactor? {
-        println("현재 ${method.name}님으로 로그인되어 있습니다.")
+        println("\n현재 ${method.name}님으로 로그인되어 있습니다.")
         println("1. 지원서 목록 확인")
         println("2. 지원서 점수 매기기")
         println("3. 돌아가기")

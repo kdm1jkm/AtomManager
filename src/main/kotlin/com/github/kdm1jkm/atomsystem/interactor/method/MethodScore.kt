@@ -8,7 +8,8 @@ import com.github.kdm1jkm.atomsystem.models.Application.State.NOT_RATED
 import com.github.kdm1jkm.atomsystem.models.ApplicationMethod
 
 class MethodScore(private val manager: ApplicationManager, private val method: ApplicationMethod) : Interactor {
-    override fun run(): Interactor? {
+    override fun run(): Interactor {
+        println()
         manager.getApplied(method)
             .filter { it.state == NOT_RATED }
             .forEach {
