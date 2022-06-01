@@ -17,7 +17,7 @@ class DBManager(file: File? = null) {
     private val data: DBData
 
     init {
-        data = if (file == null) {
+        data = if (file == null || file.isFile) {
             DBData(ArrayList(), ArrayList(), ArrayList())
         } else {
             Json.decodeFromStream(FileInputStream(file))
